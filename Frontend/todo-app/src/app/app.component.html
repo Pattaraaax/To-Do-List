@@ -1,20 +1,22 @@
-<h1>To-Do List</h1>
+<div class="container">
+  <h1>To-Do List</h1>
 
-<!-- เพิ่ม / แก้ไข -->
-<div class="form">
-  <input [(ngModel)]="title" placeholder="Enter Text..." />
-  <button (click)="save()">{{ editingId === null ? 'ADD' : 'SAVE' }}</button>
-  <button *ngIf="editingId !== null" (click)="cancelEdit()">CANCEL</button>
+  <!-- Add/Edit Form -->
+  <div class="form">
+    <input [(ngModel)]="title" placeholder="Enter Text..." />
+    <button (click)="save()">{{ editingId === null ? 'ADD' : 'SAVE' }}</button>
+    <button *ngIf="editingId !== null" (click)="cancelEdit()">CANCEL</button>
+  </div>
+
+  <!-- List -->
+  <ul>
+    <li *ngFor="let todo of todos">
+      <input type="checkbox" [checked]="todo.isCompleted" (change)="toggleCompleted(todo)" />
+      <span [class.done]="todo.isCompleted">{{ todo.title }}</span>
+      <button (click)="edit(todo)">EDIT</button>
+      <button (click)="delete(todo.id)">DELETE</button>
+    </li>
+  </ul>
+
+  <p *ngIf="todos.length === 0">No data in the list</p>
 </div>
-
-<!-- รายการ -->
-<ul>
-  <li *ngFor="let todo of todos">
-    <input type="checkbox" [checked]="todo.isCompleted" (change)="toggleCompleted(todo)" />
-    <span [class.done]="todo.isCompleted">{{ todo.title }}</span>
-    <button (click)="edit(todo)">EDIT</button>
-    <button (click)="delete(todo.id)">DELETE</button>
-  </li>
-</ul>
-
-<p *ngIf="todos.length === 0">No data in the list</p>

@@ -1,28 +1,75 @@
-body {
-  font-family: Arial, sans-serif;
-  max-width: 500px;
-  margin: 2rem auto;
+/* ส่วนประกอบภายใน (เอา body ออก) */
+.container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border: 4px solid #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 300;
+  color: #333;
+  margin-top: 0;
 }
 
 .form {
   display: flex;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
-input[type="text"], .form input {
+input[type="text"] {
   flex: 1;
-  padding: 0.4rem;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+button {
+  padding: 0.7rem 1rem;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #eee;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
 }
 
 li {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.4rem;
+  gap: 0.8rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+span {
+  flex: 1;
 }
 
 .done {
   text-decoration: line-through;
-  color: gray;
+  color: #646464;
+}
+
+p {
+  color: #888;
+  margin-top: 1rem;
 }

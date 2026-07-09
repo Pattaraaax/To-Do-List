@@ -1,0 +1,13 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+
+# Angular
+dist/
+tmp/
+out-tsc/
+.angular/
+node_modules/
+*.log

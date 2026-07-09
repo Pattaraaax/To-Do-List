@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  // ใช้เพิ่มใหม่ และบันทึกการแก้ไข
+  // Add Edit
   save() {
     if (!this.title.trim()) return;
 

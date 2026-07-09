@@ -1,1 +1,9 @@
-/* global styles - ไม่ได้ใช้อะไรมาก เพราะ style หลักอยู่ใน app.component.css */
+/*  src/styles.css */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #8a8a8a; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
